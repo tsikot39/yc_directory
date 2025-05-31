@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YC Directory - Application Documentation
 
-## Getting Started
+## Overview
+YC Directory is a platform designed for entrepreneurs to showcase their startups, connect with other entrepreneurs, and participate in virtual pitch competitions. The application serves as a directory for startups, allowing users to submit their ideas, vote on pitches, and gain visibility in the entrepreneurial community.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Core Features
+1. **Startup Directory**
+   - Browse all startups in a card-based grid layout
+   - Search functionality to find specific startups
+   - View detailed information about individual startups
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **User Profiles**
+   - GitHub authentication for user accounts
+   - User profile pages displaying user information
+   - View startups associated with specific users
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Startup Management**
+   - Create new startup listings with detailed information
+   - Edit existing startup information
+   - Track views on startup listings
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Social Features**
+   - Vote on startup pitches
+   - Connect with other entrepreneurs
+   - Participate in virtual competitions
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+- **React 19 (RC)** - For building the user interface
+- **Next.js 15 (Canary)** - React framework for server-side rendering and static site generation
+- **TypeScript** - For type safety and improved developer experience
+- **Tailwind CSS** - For styling and responsive design
+- **Radix UI** - For accessible UI components
+- **Markdown Support** - For rich text content in startup descriptions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend & Data Management
+- **Sanity CMS** - For content management and storage
+- **Next-Auth** - For authentication with GitHub provider
+- **API Routes** - For server-side functionality
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Deployment & Monitoring
+- **Sentry** - For error tracking and monitoring
 
-## Deploy on Vercel
+## Next.js/React Features Utilized
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Next.js App Router
+- Organized file-based routing with the App Router architecture
+- Dynamic routes for startup and user pages (`[id]`)
+- Nested layouts for consistent UI across pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Server Components
+- Server-side rendering for improved performance and SEO
+- Mixing of server and client components for optimal user experience
+
+### Data Fetching
+- Server-side data fetching with Sanity
+- Real-time updates with Sanity Live
+
+### Authentication
+- Seamless authentication flow with Next-Auth
+- GitHub OAuth integration
+- Session management with JWT
+
+### Optimizations
+1. **Performance Optimizations**
+   - Partial Prerendering (PPR) in incremental mode for faster page loads
+   - Font optimization with `next/font/local`
+   - Image optimization with remote patterns configuration
+
+2. **Developer Experience**
+   - TypeScript integration for type safety
+   - ESLint configuration for code quality
+   - Development indicators for better debugging
+
+3. **Build Optimizations**
+   - Ignoring TypeScript and ESLint errors during production builds for faster deployments
+
+## Future Enhancements
+1. **Additional Authentication Providers**
+   - Currently only GitHub authentication is supported
+   - Could add Google, Twitter, or LinkedIn authentication
+
+2. **Enhanced Social Features**
+   - Comments and discussions on startup pitches
+   - Direct messaging between users
+   - More interactive voting mechanisms
+
+3. **Analytics Dashboard**
+   - Provide startup owners with analytics on views, votes, and engagement
+   - Trend analysis for popular startup categories
+
+4. **Mobile Application**
+   - Develop a companion mobile app for on-the-go access
+   - Push notifications for important updates
+
+5. **Monetization Options**
+   - Premium features for startup promotion
+   - Sponsored listings or featured startups
+
+## Conclusion
+YC Directory is a modern, feature-rich application built with cutting-edge technologies. It leverages the power of Next.js and React for frontend performance, Sanity CMS for flexible content management, and various optimizations to ensure a smooth user experience. The application provides a valuable platform for entrepreneurs to showcase their startups and connect with the broader entrepreneurial community.
